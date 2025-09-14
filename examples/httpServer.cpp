@@ -51,7 +51,7 @@ HttpResponse handleGetRequest(HttpRequest request)
         response.body = "";
     }
 
-    response.headers["Content-Length"] = response.body.length();
+    response.headers["Content-Length"] = String(response.body.length());
     return response;
 }
 
@@ -77,7 +77,7 @@ HttpResponse handleOtherRequest(HttpRequest request)
     response.body += "\r\n";
     response.body += "Got " + request.methodName + " method";
 
-    response.headers["Content-Length"] = response.body.length();
+    response.headers["Content-Length"] = String(response.body.length());
     return response;
 }
 

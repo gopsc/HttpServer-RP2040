@@ -33,7 +33,7 @@ HttpResponse handleRequest(HttpRequest request)
             response.code = 200;
             response.codeDescription = "OK";
             response.body = "Some data to return";
-            response.headers["Content-Length"] = response.body.length();
+            response.headers["Content-Length"] = String(response.body.length());
 
             return response;
         }

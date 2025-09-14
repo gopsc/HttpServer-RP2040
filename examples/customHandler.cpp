@@ -25,7 +25,7 @@ HttpResponse CustomHandler::handle(const HttpRequest &request)
 
     response.headers["Connection"] = "close";
     response.headers["Content-Type"] = "text/plain";
-    response.headers["Content-Length"] = response.body.length();
+    response.headers["Content-Length"] = String(response.body.length());
 
     return response;
 }
